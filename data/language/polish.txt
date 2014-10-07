@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (Polish Translation)
+# by Artur Rojek
+#
+
+L000 Naciśnij Start aby rozpocząć
+
+L001 Menu Główne
+L002 Jeden gracz
+L003 Wielu graczy
+L004 Ustawienia gry
+L005 Zasady gry
+L006 Wyjdź
+
+L007 Wielu graczy
+L008 Stwórz grę sieciową
+L009 Podłącz do serwera
+L010 Ustawienia gracza
+L011 Stwórz nowy serwer
+L012 Podłącz do serwera
+L013 Wprowadź swoje imię
+L014 Stwórz grę sieciową
+L015 Poziom gry
+L016 Punktacja
+L061 Zablokuj gry
+L062 Ewolucja
+L017 Ustaw poziom gry
+L018 Ustaw punktację
+L019 Podłącz do serwera
+L020 Wprowadź adres IP serwera
+L021 chce się przyłączyć!
+L022 Ustawienia gracza
+L023 Wpisz swoje imię
+
+L024 Ustawienia gry
+L025 Poziom gry
+L026 Włącz tryb debug
+L027 Język
+L028 Pełny ekran
+L029 Rozmiar ekranu
+L030 Opuszczanie klatek (frameskip)
+L031 Pokazuj FPS
+L032 Zamień dżojstiki
+L033 Włącz dźwięk
+L034 Poziom muzyki
+L035 Poziom dźwięku
+L036 Ustaw poziom gry
+L037 Zezwól na raport błędów
+L038 Wybierz język
+L039 Ustaw pełny ekran
+L040 Ustaw rozmiar ekranu
+L041 Ustaw prędkość gry
+L042 Wyświetlaj ramkę z prędkością gry
+L043 Zamień dżojstiki
+L044 Włącz dźwięk
+L045 Ustaw poziom muzyki
+L046 Ustaw poziom dźwięku
+
+L047 Tak
+L048 Nie
+
+L049 Angielski
+L050 Niemiecki
+L051 Chiński
+L052 Japoński
+L053 Polski
+L054 Francuski
+L055 Hiszpański
+L056 Portugalski
+L057 Koreański
+
+L058 Lista serwerów
+L059 Wybierz serwer
+L060 Czekam na gracza

@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (Portuguese Translation)
+# by Shin-NiL [http://shinnil.blogspot.com.br/]
+#
+
+L000 Aperte Start para Começar
+
+L001 Principal
+L002 Um Jogador
+L003 Vários Jogadores
+L004 Configurações do Jogo
+L005 Regras do Jogo
+L006 Sair do Jogo
+
+L007 Vários Jogadores
+L008 Criar um Jogo em Rede
+L009 Conectar ao Servidor
+L010 Configuração do Jogador
+L011 Iniciar novo Servidor de Jogo
+L012 Conectar ao Servidor de Jogo
+L013 Insira seu Nome de Jogador
+L014 Criar Partida em Rede
+L015 Nível do Jogo
+L016 Pontuação do Jogo
+L061 Bloco do Jogo
+L062 Evolução
+L017 Ajustar o Nível do Jogo
+L018 Ajustar a Pontuação do Jogo
+L019 Conectar ao Servidor
+L020 Insira o IP do Servidor
+L021 ao qual conectar
+L022 Configuração do Jogador
+L023 Insira aqui seu Nome de Jogador
+
+L024 Configuração do Jogo
+L025 Nível do Jogo
+L026 Permitir Depuração
+L027 Idioma
+L028 Tela Cheia
+L029 Tamanho da Tela
+L030 Salto de Quadros
+L031 Mostrar FPS
+L032 Trocar Joystick
+L033 Habilitar Som
+L034 Volume da Música
+L035 Volume do Som
+L036 Ajustar o Nível do Jogo
+L037 Habilitar depuração para obter relatório de falhas
+L038 Escolha um Idioma
+L039 Ajustar o Jogo para Tela Cheia
+L040 Ajustar o Tamanho da Tela de Jogo
+L041 Ajustar a Velocidade do Jogo
+L042 Exibir Velocidade de Quadros do Jogo
+L043 Trocar os Controles do Joystick
+L044 Permitir o uso de Som
+L045 Ajustar o Volume da Música
+L046 Ajustar o Volume do Som
+
+L047 Sim
+L048 Não
+
+L049 Inglês
+L050 Alemão
+L051 Chinês
+L052 Japonês
+L053 Polonês
+L054 Francês
+L055 Espanhol
+L056 Português
+L057 Coreano
+
+L058 Lista de Servidores
+L059 Escolha um Servidor
+L060 Esperando pelo Jogador

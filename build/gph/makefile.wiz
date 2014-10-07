@@ -1,0 +1,33 @@
+TARGET = tailtale.gpe
+
+HOST = arm-open2x-linux-
+AS = $(HOST)as
+CC = $(HOST)gcc
+CXX = $(HOST)g++
+OBJCOPY = $(HOST)objcopy
+STRIP = $(HOST)strip
+
+INC = -I. -I../../include
+SRC = . ../../source
+
+LIBDIR = -L/devkitWIZ/arm-open2x-linux/lib
+LIBINC = -I/devkitWIZ/arm-open2x-linux/include -I/devkitWIZ/arm-open2x-linux/include/SDL
+LIBS = $(LIBDIR) -lSDL_image -ljpeg -lSDL_mixer -lvorbisidec \
+	-lSDL_ttf -lfreetype -lSDL -lz -lstdc++
+
+CFLAGS = -g -W -Wall -Os $(INC) $(LIBINC) -DSDL -D__GP2X__ -DGPH -DWIZ
+LDFLAGS = $(LIBS)
+
+CFILES = $(foreach dir, $(SRC), $(wildcard $(dir)/*.c))
+OFILES = $(CFILES:.c=.o)
+
+$(TARGET): $(OFILES)
+	mkdir -p ../../release
+	$(CC) $(OFILES) -o ./$@ $(LDFLAGS)
+	$(STRIP) $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c ./$< -o ./$@
+
+clean:
+	rm -f $(TARGET) $(OFILES)

@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=TailTale
+Comment=Doujin puzzle game
+Exec=tailtale
+Terminal=false
+Type=Application
+StartupNotify=true
+Icon=tailtale
+Categories=games

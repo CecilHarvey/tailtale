@@ -1,0 +1,625 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{2434c2f6-907d-4084-b5e2-8b2fa68eb4ba}</ProjectGuid>
+    <RootNamespace>tailtale</RootNamespace>
+    <DefaultLanguage>en-US</DefaultLanguage>
+    <MinimumVisualStudioVersion>11.0</MinimumVisualStudioVersion>
+    <XapOutputs>true</XapOutputs>
+    <XapFilename>TailTale_$(Configuration)_$(Platform).xap</XapFilename>
+    <WinMDAssembly>true</WinMDAssembly>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v110_wp80</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="PropertySheets">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WINPHONE;TOUCH;NETWORK;MOVIE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories);..\..\include;..\..\shared\source\theora\theora;..\..\shared\source\theora</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DisableSpecificWarnings>4013;4101;4244;4453;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;freetype-WinPhone.lib;SDL_ttf-WinPhone.lib;libpng.lib;SDL2_image.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;SDL2_mixer-WinPhone.lib;zlib.lib;SDL-WinPhone.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WINPHONE;TOUCH;NETWORK;MOVIE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories);..\..\include;..\..\shared\source\theora\theora;..\..\shared\source\theora</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DisableSpecificWarnings>4013;4101;4244;4453;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;freetype-WinPhone.lib;SDL_ttf-WinPhone.lib;libpng.lib;SDL2_image.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;SDL2_mixer-WinPhone.lib;zlib.lib;SDL-WinPhone.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WINPHONE;TOUCH;NETWORK;MOVIE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories);..\..\include;..\..\shared\source\theora\theora;..\..\shared\source\theora</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DisableSpecificWarnings>4013;4101;4244;4453;4996</DisableSpecificWarnings>
+      <SDLCheck>true</SDLCheck>
+      <WarningLevel>EnableAllWarnings</WarningLevel>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;freetype-WinPhone.lib;SDL_ttf-WinPhone.lib;libpng.lib;SDL2_image.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;SDL2_mixer-WinPhone.lib;zlib.lib;SDL-WinPhone.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <ClCompile>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WINPHONE;TOUCH;NETWORK;MOVIE;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);$(IntermediateOutputPath);%(AdditionalIncludeDirectories);..\..\include;..\..\shared\source\theora\theora;..\..\shared\source\theora</AdditionalIncludeDirectories>
+      <CompileAsWinRT>false</CompileAsWinRT>
+      <DisableSpecificWarnings>4013;4101;4244;4453;4996</DisableSpecificWarnings>
+    </ClCompile>
+    <Link>
+      <AdditionalDependencies>d3d11.lib;freetype-WinPhone.lib;SDL_ttf-WinPhone.lib;libpng.lib;SDL2_image.lib;libogg.lib;libvorbis.lib;libvorbisfile.lib;SDL2_mixer-WinPhone.lib;zlib.lib;SDL-WinPhone.lib;ws2_32.lib;%(AdditionalDependencies)</AdditionalDependencies>
+      <GenerateWindowsMetadata>false</GenerateWindowsMetadata>
+      <IgnoreSpecificDefaultLibraries>ole32.lib;%(IgnoreSpecificDefaultLibraries)</IgnoreSpecificDefaultLibraries>
+    </Link>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Reference Include="platform.winmd">
+      <IsWinMDFile>true</IsWinMDFile>
+      <Private>false</Private>
+    </Reference>
+  </ItemGroup>
+  <ItemGroup>
+    <Image Include="Assets\ApplicationIcon.png" />
+    <Image Include="Assets\AlignmentGrid.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileLarge.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileMedium.png" />
+    <Image Include="Assets\Tiles\FlipCycleTileSmall.png" />
+    <Image Include="Assets\Tiles\IconicTileMediumLarge.png" />
+    <Image Include="Assets\Tiles\IconicTileSmall.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Xml Include="WMAppManifest.xml">
+      <SubType>Designer</SubType>
+    </Xml>
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="..\win32\tailtale_win8-vs2013\sdl_main.cpp" />
+    <ClCompile Include="..\..\source\base.c" />
+    <ClCompile Include="..\..\source\common.c" />
+    <ClCompile Include="..\..\source\disp.c" />
+    <ClCompile Include="..\..\source\font.c" />
+    <ClCompile Include="..\..\source\input.c" />
+    <ClCompile Include="..\..\source\language.c" />
+    <ClCompile Include="..\..\source\main.c" />
+    <ClCompile Include="..\..\source\menu.c" />
+    <ClCompile Include="..\..\source\movie.c" />
+    <ClCompile Include="..\..\source\netcode.c" />
+    <ClCompile Include="..\..\source\network.c" />
+    <ClCompile Include="..\..\source\port.c" />
+    <ClCompile Include="..\..\source\screen.c" />
+    <ClCompile Include="..\..\source\sound.c" />
+    <ClCompile Include="..\..\source\sprite.c" />
+    <ClCompile Include="..\..\source\texture.c" />
+    <ClCompile Include="..\..\source\trial.c" />
+    <ClCompile Include="..\..\shared\source\theora\analyze.c" />
+    <ClCompile Include="..\..\shared\source\theora\apiwrapper.c" />
+    <ClCompile Include="..\..\shared\source\theora\bitpack.c" />
+    <ClCompile Include="..\..\shared\source\theora\decapiwrapper.c" />
+    <ClCompile Include="..\..\shared\source\theora\decinfo.c" />
+    <ClCompile Include="..\..\shared\source\theora\decode.c" />
+    <ClCompile Include="..\..\shared\source\theora\dequant.c" />
+    <ClCompile Include="..\..\shared\source\theora\encapiwrapper.c" />
+    <ClCompile Include="..\..\shared\source\theora\encfrag.c" />
+    <ClCompile Include="..\..\shared\source\theora\encinfo.c" />
+    <ClCompile Include="..\..\shared\source\theora\encode.c" />
+    <ClCompile Include="..\..\shared\source\theora\enquant.c" />
+    <ClCompile Include="..\..\shared\source\theora\fdct.c" />
+    <ClCompile Include="..\..\shared\source\theora\fragment.c" />
+    <ClCompile Include="..\..\shared\source\theora\huffdec.c" />
+    <ClCompile Include="..\..\shared\source\theora\huffenc.c" />
+    <ClCompile Include="..\..\shared\source\theora\idct.c" />
+    <ClCompile Include="..\..\shared\source\theora\info.c" />
+    <ClCompile Include="..\..\shared\source\theora\internal.c" />
+    <ClCompile Include="..\..\shared\source\theora\mathops.c" />
+    <ClCompile Include="..\..\shared\source\theora\mcenc.c" />
+    <ClCompile Include="..\..\shared\source\theora\quant.c" />
+    <ClCompile Include="..\..\shared\source\theora\rate.c" />
+    <ClCompile Include="..\..\shared\source\theora\state.c" />
+    <ClCompile Include="..\..\shared\source\theora\theoraplay.c" />
+    <ClCompile Include="..\..\shared\source\theora\tokenize.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="..\win32\tailtale_win8-vs2013\pch.h" />
+    <ClInclude Include="..\..\include\base.h" />
+    <ClInclude Include="..\..\include\common.h" />
+    <ClInclude Include="..\..\include\default.h" />
+    <ClInclude Include="..\..\include\disp.h" />
+    <ClInclude Include="..\..\include\font.h" />
+    <ClInclude Include="..\..\include\input.h" />
+    <ClInclude Include="..\..\include\main.h" />
+    <ClInclude Include="..\..\include\menu.h" />
+    <ClInclude Include="..\..\include\network.h" />
+    <ClInclude Include="..\..\include\port.h" />
+    <ClInclude Include="..\..\include\screen.h" />
+    <ClInclude Include="..\..\include\sound.h" />
+    <ClInclude Include="..\..\include\sprite.h" />
+    <ClInclude Include="..\..\include\table.h" />
+    <ClInclude Include="..\..\include\texture.h" />
+    <ClInclude Include="..\..\include\trial.h" />
+    <ClInclude Include="..\..\shared\source\theora\apiwrapper.h" />
+    <ClInclude Include="..\..\shared\source\theora\bitpack.h" />
+    <ClInclude Include="..\..\shared\source\theora\config.h" />
+    <ClInclude Include="..\..\shared\source\theora\cvtrgb.h" />
+    <ClInclude Include="..\..\shared\source\theora\dct.h" />
+    <ClInclude Include="..\..\shared\source\theora\decint.h" />
+    <ClInclude Include="..\..\shared\source\theora\dequant.h" />
+    <ClInclude Include="..\..\shared\source\theora\encint.h" />
+    <ClInclude Include="..\..\shared\source\theora\enquant.h" />
+    <ClInclude Include="..\..\shared\source\theora\huffdec.h" />
+    <ClInclude Include="..\..\shared\source\theora\huffenc.h" />
+    <ClInclude Include="..\..\shared\source\theora\huffman.h" />
+    <ClInclude Include="..\..\shared\source\theora\internal.h" />
+    <ClInclude Include="..\..\shared\source\theora\mathops.h" />
+    <ClInclude Include="..\..\shared\source\theora\modedec.h" />
+    <ClInclude Include="..\..\shared\source\theora\ocintrin.h" />
+    <ClInclude Include="..\..\shared\source\theora\quant.h" />
+    <ClInclude Include="..\..\shared\source\theora\theoraplay.h" />
+    <ClInclude Include="..\..\shared\source\theora\theora\codec.h" />
+    <ClInclude Include="..\..\shared\source\theora\theora\theora.h" />
+    <ClInclude Include="..\..\shared\source\theora\theora\theoradec.h" />
+    <ClInclude Include="..\..\shared\source\theora\theora\theoraenc.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="./SplashScreenImage.jpg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/freetype-WinPhone.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/SDL_ttf-WinPhone.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/libogg.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/libvorbis.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/libvorbisfile.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/SDL2_mixer-WinPhone.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/libpng.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/SDL2_image.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/SDL-WinPhone.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../shared/compile/wp8/zlib.dll">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/game_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/game_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/menu_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/menu_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/movie.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/title.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/day/lv7.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/background/night/lv7.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara01_6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/character/chara02_1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/evo.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/logo.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/misc.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/rules.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/text.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/touch.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/title/title_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/title/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/graphic/system/title/title_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/title/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/media/cg1.ogv">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)media/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/media/cg2.ogv">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)media/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/media/cg3.ogv">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)media/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/media/cg4.ogv">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)media/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/snd.lst">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/clean.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/clear.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/fall.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/get_ready.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/null.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/game/talk.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/cancel.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/connect.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/decision.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/enter.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/init.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/move.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/menu/start.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/freeplay.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/gameover.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/network.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage1.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage2.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage3.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage4.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage5.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/stage6.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/music/title.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/bvs.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/bye_bye.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/game_rules.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/game_settings.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/gameover.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/multiplayer.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/new_level.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/new_stage.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/quit.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/ready.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/see_you_later.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/singleplayer.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/sound/voice/title.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/chinese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/code2000.ttf">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/english.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/french.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/german.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/icon.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/japanese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/korean.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/polish.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/portuguese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../data/system/spanish.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <Import Project="$(MSBuildExtensionsPath)\Microsoft\WindowsPhone\v$(TargetPlatformVersion)\Microsoft.Cpp.WindowsPhone.$(TargetPlatformVersion).targets" />
+  <ImportGroup Label="ExtensionTargets">
+  </ImportGroup>
+</Project>

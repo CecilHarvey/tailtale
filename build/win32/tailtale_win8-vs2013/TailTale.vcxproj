@@ -1,0 +1,766 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project DefaultTargets="Build" ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <ItemGroup Label="ProjectConfigurations">
+    <ProjectConfiguration Include="Debug|Win32">
+      <Configuration>Debug</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|Win32">
+      <Configuration>Release</Configuration>
+      <Platform>Win32</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|x64">
+      <Configuration>Debug</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|x64">
+      <Configuration>Release</Configuration>
+      <Platform>x64</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Debug|ARM">
+      <Configuration>Debug</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+    <ProjectConfiguration Include="Release|ARM">
+      <Configuration>Release</Configuration>
+      <Platform>ARM</Platform>
+    </ProjectConfiguration>
+  </ItemGroup>
+  <PropertyGroup Label="Globals">
+    <ProjectGuid>{003d9494-1e67-454f-91f8-4da9348a8cd8}</ProjectGuid>
+    <RootNamespace>TailTale</RootNamespace>
+    <DefaultLanguage>en</DefaultLanguage>
+    <MinimumVisualStudioVersion>12.0</MinimumVisualStudioVersion>
+    <AppContainerApplication>true</AppContainerApplication>
+    <ApplicationType>Windows Store</ApplicationType>
+    <ApplicationTypeRevision>8.1</ApplicationTypeRevision>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.Default.props" />
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>true</UseDebugLibraries>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'" Label="Configuration">
+    <ConfigurationType>Application</ConfigurationType>
+    <UseDebugLibraries>false</UseDebugLibraries>
+    <WholeProgramOptimization>true</WholeProgramOptimization>
+    <PlatformToolset>v120</PlatformToolset>
+  </PropertyGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.props" />
+  <ImportGroup Label="ExtensionSettings">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.props" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.props" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <ImportGroup Label="PropertySheets" Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Import Project="$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props" Condition="exists('$(UserRootDir)\Microsoft.Cpp.$(Platform).user.props')" Label="LocalAppDataPlatform" />
+  </ImportGroup>
+  <PropertyGroup Label="UserMacros" />
+  <PropertyGroup>
+    <PackageCertificateKeyFile>TailTale_StoreKey.pfx</PackageCertificateKeyFile>
+    <IncludePath>$(SolutionDir)\..\..\..\shared\include\SDL2;$(SolutionDir)\..\..\..\shared\include;$(SolutionDir)\..\..\..\shared\source\theora;$(IncludePath)</IncludePath>
+    <LibraryPath>$(SolutionDir)\..\..\..\shared\lib;$(LibraryPath)</LibraryPath>
+    <AppxAutoIncrementPackageRevision>False</AppxAutoIncrementPackageRevision>
+    <AppxBundlePlatforms>x86</AppxBundlePlatforms>
+    <PackageCertificateThumbprint>724A7CF5B66C698E958972B7C92F595DD9512448</PackageCertificateThumbprint>
+  </PropertyGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|ARM'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.lib; SDL2_image.lib; SDL2_mixer.lib; libvorbis.lib; libvorbisfile.lib; libogg.lib; SDL2_ttf.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\arm; $(VCInstallDir)\lib\arm</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|ARM'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.lib; SDL2_image.lib; SDL2_mixer.lib; libvorbis.lib; libvorbisfile.lib; libogg.lib; SDL2_ttf.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\arm; $(VCInstallDir)\lib\arm</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.lib; SDL2_image.lib; SDL2_mixer.lib; libvorbis.lib; libvorbisfile.lib; libogg.lib; SDL2_ttf.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.lib; SDL2_image.lib; SDL2_mixer.lib; libvorbis.lib; libvorbisfile.lib; libogg.lib; SDL2_ttf.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store; $(VCInstallDir)\lib</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.x64.lib; SDL2_image.x64.lib; SDL2_mixer.x64.lib; libvorbis.x64.lib; libvorbisfile.x64.lib; libogg.x64.lib; SDL2_ttf.x64.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemDefinitionGroup Condition="'$(Configuration)|$(Platform)'=='Release|x64'">
+    <Link>
+      <AdditionalDependencies>d3d11.lib; winrt/SDL2.x64.lib; SDL2_image.x64.lib; SDL2_mixer.x64.lib; libvorbis.x64.lib; libvorbisfile.x64.lib; libogg.x64.lib; SDL2_ttf.x64.lib; %(AdditionalDependencies)</AdditionalDependencies>
+      <AdditionalLibraryDirectories>%(AdditionalLibraryDirectories); $(VCInstallDir)\lib\store\amd64; $(VCInstallDir)\lib\amd64</AdditionalLibraryDirectories>
+    </Link>
+    <ClCompile>
+      <PrecompiledHeader>NotUsing</PrecompiledHeader>
+      <PrecompiledHeaderFile>pch.h</PrecompiledHeaderFile>
+      <AdditionalIncludeDirectories>$(ProjectDir);../../../include/;$(IntermediateOutputPath);%(AdditionalIncludeDirectories)</AdditionalIncludeDirectories>
+      <AdditionalOptions>/bigobj %(AdditionalOptions)</AdditionalOptions>
+      <DisableSpecificWarnings>4013;4101;4244;4447;4453;4996</DisableSpecificWarnings>
+      <PreprocessorDefinitions>_CRT_SECURE_NO_WARNINGS;_SCL_SECURE_NO_WARNINGS;HAVE_CONFIG_H;PSAPI_VERSION=2;SDL2;WIN32;VS_WIN8;X86;ICON;__WINRT__;%(PreprocessorDefinitions)</PreprocessorDefinitions>
+      <CompileAsWinRT>false</CompileAsWinRT>
+    </ClCompile>
+  </ItemDefinitionGroup>
+  <ItemGroup>
+    <Image Include="Assets\Logo.png" />
+    <Image Include="Assets\SmallLogo.png" />
+    <Image Include="Assets\StoreLogo.png" />
+    <Image Include="Assets\SplashScreen.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClInclude Include="pch.h" />
+    <ClInclude Include="..\..\..\include\base.h" />
+    <ClInclude Include="..\..\..\include\common.h" />
+    <ClInclude Include="..\..\..\include\default.h" />
+    <ClInclude Include="..\..\..\include\disp.h" />
+    <ClInclude Include="..\..\..\include\font.h" />
+    <ClInclude Include="..\..\..\include\input.h" />
+    <ClInclude Include="..\..\..\include\main.h" />
+    <ClInclude Include="..\..\..\include\menu.h" />
+    <ClInclude Include="..\..\..\include\network.h" />
+    <ClInclude Include="..\..\..\include\port.h" />
+    <ClInclude Include="..\..\..\include\screen.h" />
+    <ClInclude Include="..\..\..\include\sound.h" />
+    <ClInclude Include="..\..\..\include\sprite.h" />
+    <ClInclude Include="..\..\..\include\table.h" />
+    <ClInclude Include="..\..\..\include\texture.h" />
+    <ClInclude Include="..\..\..\include\trial.h" />
+  </ItemGroup>
+  <ItemGroup>
+    <ClCompile Include="sdl_main.cpp">
+      <CompileAsWinRT>true</CompileAsWinRT>
+    </ClCompile>
+    <ClCompile Include="..\..\..\source\base.c" />
+    <ClCompile Include="..\..\..\source\common.c" />
+    <ClCompile Include="..\..\..\source\disp.c" />
+    <ClCompile Include="..\..\..\source\font.c" />
+    <ClCompile Include="..\..\..\source\input.c" />
+    <ClCompile Include="..\..\..\source\language.c" />
+    <ClCompile Include="..\..\..\source\main.c" />
+    <ClCompile Include="..\..\..\source\menu.c" />
+    <ClCompile Include="..\..\..\source\movie.c" />
+    <ClCompile Include="..\..\..\source\netcode.c" />
+    <ClCompile Include="..\..\..\source\network.c" />
+    <ClCompile Include="..\..\..\source\port.c" />
+    <ClCompile Include="..\..\..\source\screen.c" />
+    <ClCompile Include="..\..\..\source\sound.c" />
+    <ClCompile Include="..\..\..\source\sprite.c" />
+    <ClCompile Include="..\..\..\source\texture.c" />
+    <ClCompile Include="..\..\..\source\trial.c" />
+  </ItemGroup>
+  <ItemGroup>
+    <AppxManifest Include="Package.appxmanifest">
+      <SubType>Designer</SubType>
+    </AppxManifest>
+    <None Include="TailTale_StoreKey.pfx" />
+    <None Include="TailTale_TemporaryKey.pfx" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="../../../shared/compile/SDL2/libFLAC-8.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libfreetype-6.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libjpeg-9.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libmikmod-2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libmodplug-1.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libogg-0.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libpng16-16.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libtiff-5.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libvorbis-0.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libvorbisfile-3.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/libwebp-4.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/winrt/SDL2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/SDL2_image.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/SDL2_mixer.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/SDL2_ttf.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/smpeg2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/zlib1.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|Win32'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|Win32'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libFLAC-8.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libfreetype-6.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libjpeg-9.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libmikmod-2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libmodplug-1.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libogg-0.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libpng16-16.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libtiff-5.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libvorbis-0.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libvorbisfile-3.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/libwebp-4.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/winrt/x64/SDL2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/SDL2_image.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/SDL2_mixer.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/SDL2_ttf.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/smpeg2.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../shared/compile/SDL2/x64/zlib1.dll">
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Debug|x64'">true</DeploymentContent>
+      <DeploymentContent Condition="'$(Configuration)|$(Platform)'=='Release|x64'">true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/tailtale.ini">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/game_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/game_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/menu_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/menu_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/movie.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/title.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/day/lv7.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/day/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/background/night/lv7.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/background/night/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_2.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_3.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_4.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_5.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara01_6.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/character/chara02_1.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/character/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/evo.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/logo.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/misc.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/rules.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/text.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/touch.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/title/title_320.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/title/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/graphic/system/title/title_480.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)graphic/system/title/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/snd.lst">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/clean.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/clear.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/fall.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/get_ready.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/null.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/game/talk.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/game/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/cancel.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/connect.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/decision.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/enter.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/init.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/move.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/menu/start.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/menu/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/freeplay.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/gameover.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/network.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage1.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage2.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage3.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage4.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage5.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/stage6.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/music/title.ogg">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/music/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/bvs.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/bye_bye.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/game_rules.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/game_settings.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/gameover.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/multiplayer.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/new_level.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/new_stage.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/quit.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/ready.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/see_you_later.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/singleplayer.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/sound/voice/title.wav">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)sound/voice/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/chinese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/code2000.ttf">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/english.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/french.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/german.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/icon.tga">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/japanese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/korean.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/polish.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/portuguese.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+    <None Include="../../../data/system/spanish.txt">
+      <DeploymentContent>true</DeploymentContent>
+      <Link>%(OutputDir)system/%(FileName)%(Extension)</Link>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Package.StoreAssociation.xml" />
+  </ItemGroup>
+  <Import Project="$(VCTargetsPath)\Microsoft.Cpp.targets" />
+  <ImportGroup Label="ExtensionTargets">
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ImageContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\MeshContentTask.targets" />
+    <Import Project="$(VSINSTALLDIR)\Common7\IDE\Extensions\Microsoft\VsGraphics\ShaderGraphContentTask.targets" />
+  </ImportGroup>
+</Project>

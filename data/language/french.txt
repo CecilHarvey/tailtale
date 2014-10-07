@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (French Translation)
+# by Asceline Dury
+#
+
+L000 Appuyer sur Entrée pour commencer
+
+L001 Main
+L002 Un joueur
+L003 Multijoueur
+L004 Paramètres du jeu
+L005 Règles du jeu
+L006 Quitter le jeu
+
+L007 Multijoueur
+L008 Créer un réseau de jeu
+L009 Se connecter au serveur
+L010 Configurations des joueurs
+L011 Commencer un nouveau serveur de réseau de jeu
+L012 Se connecter à un serveur de réseau de jeu
+L013 Entrer votre nom de joueur
+L014 Créer un réseau de jeu
+L015 Niveau de jeu
+L016 Score du jeu
+L061 Blocs du jeu
+L062 Évolution
+L017 Définir le niveau de jeu
+L018 Définir le score du jeu
+L019 Se connecter au serveur
+L020 Entrer l'ip du serveur
+L021 Tu veux nous rejoindre!
+L022 Configurations des joueurs
+L023 Entrer ici votre nom de joueur
+
+L024 Paramètres du jeu
+L025 Niveau du jeu
+L026 Allow Debug ?!
+L027 Langue
+L028 Plein écran
+L029 Taille de l'écran
+L030 Frameskip ?!
+L031 Montrer FPS
+L032 Echanger Joystick
+L033 Allow Sound
+L034 Volume de la musique
+L035 Volume du son
+L036 Définir le niveau de jeu
+L037 Allow debugging to get crash report
+L038 Seléctionner une langue
+L039 Définir le jeu en mode plein écran
+L040 Définir la taille de l'écran de jeu
+L041 Définir la vitesse de jeu
+L042 Afficher le cadre de vitesse du jeu ?!
+L043 Echanger le Joystick de contrôle
+L044 Permettre d'utiliser du son
+L045 Définir le volume de la musique
+L046 Définir le Volume du son
+
+L047 Oui
+L048 Non
+
+L049 Anglais
+L050 Allemand
+L051 Chinois
+L052 Japonnais
+L053 Polonais
+L054 Français
+L055 Espagnol
+L056 Portugais
+L057 Coréen
+
+L058 des serveurs
+L059 Sélectionnez un serveur
+L060 En attente du joueur

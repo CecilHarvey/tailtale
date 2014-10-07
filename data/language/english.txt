@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (English Translation)
+# by Martin Dieter
+#
+
+L000 Press Start to Begin
+
+L001 Main
+L002 Singleplayer
+L003 Multiplayer
+L004 Game Settings
+L005 Game Rules
+L006 Quit Game
+
+L007 Multiplayer
+L008 Create Network Game
+L009 Connect to Server
+L010 Player Setup
+L011 Start a new NetGame Server
+L012 Connect to an NetGame Server
+L013 Enter your Playername
+L014 Create Network Game
+L015 Game Level
+L016 Game Score
+L061 Game Block
+L062 Game Evolution
+L017 Set the Game Level
+L018 Set the Game Score
+L019 Connect to Server
+L020 Enter the ip of the Server
+L021 you want to join!
+L022 Player Setup
+L023 Enter here your Playername
+
+L024 Game Settings
+L025 Game Level
+L026 Allow Debug
+L027 Language
+L028 Fullscreen
+L029 Screen Size
+L030 Frameskip
+L031 Show FPS
+L032 Swap Joystick
+L033 Allow Sound
+L034 Music Volume
+L035 Sound Volume
+L036 Set the Game Level
+L037 Allow debugging to get crash report
+L038 Select a Language
+L039 Set Game in Fullscreen
+L040 Set Game Screen size
+L041 Set Game speed
+L042 Display Game speed frame
+L043 Swap the Joystick controle
+L044 Allow to use Sound
+L045 Set Music Volume
+L046 Set Sound Volume
+
+L047 Yes
+L048 No
+
+L049 English
+L050 German
+L051 Chinese
+L052 Japanese
+L053 Polish
+L054 French
+L055 Spanish
+L056 Portuguese
+L057 Korean
+
+L058 Serverlist
+L059 Select a Server
+L060 Waiting for the player

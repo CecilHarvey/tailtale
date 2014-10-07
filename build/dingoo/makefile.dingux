@@ -1,0 +1,32 @@
+TARGET = tailtale.dge
+
+HOST = mipsel-linux-uclibc-
+AS = $(HOST)as
+CC = $(HOST)gcc
+CXX = $(HOST)g++
+OBJCOPY = $(HOST)objcopy
+STRIP = $(HOST)strip
+
+INC = -I. -I../../include
+SRC = . ../../source
+
+LIBDIR = -L/dingux/mipsel-linux-uclibc/lib
+LIBINC = -I/dingux/mipsel-linux-uclibc/include -I/dingux/mipsel-linux-uclibc/include/SDL
+LIBS = $(LIBDIR) -lSDL_image -ljpeg -lSDL_mixer -lvorbis \
+	-lSDL_ttf -lfreetype -lSDL -lz -lstdc++
+
+CFLAGS = -g -W -Wall -Os $(INC) $(LIBINC) -DSDL -DDINGOO -DOPENDINGUX
+LDFLAGS = $(LIBS)
+
+CFILES = $(foreach dir, $(SRC), $(wildcard $(dir)/*.c))
+OFILES = $(CFILES:.c=.o)
+
+$(TARGET): $(OFILES)
+	$(CC) $(OFILES) -o ./$@ $(LDFLAGS)
+	$(STRIP) $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c ./$< -o ./$@
+
+clean:
+	rm -f $(TARGET) $(OFILES)

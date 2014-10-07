@@ -1,0 +1,33 @@
+TARGET = tailtale
+
+HOST = mipsel-linux-
+AS = $(HOST)as
+CC = $(HOST)gcc
+CXX = $(HOST)g++
+LD = $(HOST)ld
+OBJCOPY = $(HOST)objcopy
+STRIP = $(HOST)strip
+
+INC = -I. -I../../include
+SRC = . ../../source
+
+LIBDIR = -L$(DINGOO_SDK)/lib
+LIBINC = -I$(DINGOO_SDK)/include -I$(DINGOO_SDK)/include/SDL -I$(DINGOO_SDK)/include/stlport
+LIBS = $(LIBDIR) -lSDL -ltremor -lmikmod -lfreetype -lpng -lz -lm -lsml -lc -ljz4740 -lgcc -lstdc++
+
+CFLAGS = -g -G0 -O3 $(INC) $(LIBINC) -W -Wall -Wextra -finline-functions -fomit-frame-pointer -msoft-float \
+	-fno-builtin -fno-exceptions -mips32 -mno-abicalls -fno-pic -DMPU_JZ4740 -DNDEBUG -D_DINGOO -DDINGOO
+LDFLAGS = -nodefaultlibs --script $(DINGOO_SDK)/lib/dingoo.xn $(LIBS)
+
+CFILES = $(foreach dir, $(SRC), $(wildcard $(dir)/*.c))
+OFILES = $(CFILES:.c=.o)
+
+$(TARGET).elf: $(OFILES)
+	$(LD) $(OFILES) $(LDFLAGS) -o $(TARGET).elf
+	$(DINGOO_SDK)/tools/elf2app $(TARGET)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c ./$< -o ./$@
+
+clean:
+	rm -f $(TARGET).app ./$(TARGET).bin ./$(TARGET).elf $(OFILES)

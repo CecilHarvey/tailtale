@@ -1,0 +1,17 @@
+../../../../source/base.c \
+../../../../source/common.c \
+../../../../source/disp.c \
+../../../../source/font.c \
+../../../../source/input.c \
+../../../../source/language.c \
+../../../../source/main.c \
+../../../../source/menu.c \
+../../../../source/movie.c \
+../../../../source/netcode.c \
+../../../../source/network.c \
+../../../../source/port.c \
+../../../../source/screen.c \
+../../../../source/sound.c \
+../../../../source/sprite.c \
+../../../../source/texture.c \
+../../../../source/trial.c

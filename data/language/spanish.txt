@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (Spanish Translation)
+# by Francisco de la Peña
+#
+
+L000 Presiona Start para comenzar
+
+L001 Principal
+L002 Un jugador
+L003 Varios jugadores
+L004 Configuración del juego
+L005 Reglas del juego
+L006 Salir del juego
+
+L007 Varios jugadores
+L008 Crear juego en red
+L009 Conectar a servidor
+L010 Configuración del jugador
+L011 Iniciar nuevo servidor de juego
+L012 Conectar a servidor de juego
+L013 Ingresar nombre de jugador
+L014 Crear partida en red
+L015 Nivel del juego
+L016 Puntuación del juego
+L061 Bloquear del juego
+L062 Evolución
+L017 Ajustar el nivel del juego
+L018 Ajustar la puntuación del juego
+L019 Conectar a servidor
+L020 Ingresa la IP del servidor
+L021 al cual conectar
+L022 Configuración del jugador
+L023 Ingresa el nombre del jugador
+
+L024 Configuración del juego
+L025 Nivel del juego
+L026 Permitir depurar
+L027 Idioma
+L028 Pantalla completa
+L029 Tamaño de la pantalla
+L030 Salto de fotogramas
+L031 Mostrar FPS
+L032 Intercambiar joystick
+L033 Permitir sonido
+L034 Volumen de la música
+L035 Volumen del sonido
+L036 Ajustar nivel del juego
+L037 Permitir depurar para obtener informe de fallo
+L038 Seleccionar un idioma
+L039 Poner juego en pantalla completa
+L040 Ajustar el tamaño de la pantalla del juego
+L041 Ajustar velocidad del juego
+L042 Mostrar velocidad de fotogramas del juego
+L043 Intercambiar los controles de joystick
+L044 Permitir usar sonido
+L045 Ajustar volumen de la música
+L046 Ajustar volumen del sonido
+
+L047 Sí
+L048 No
+
+L049 Inglés
+L050 Alemán
+L051 Chino
+L052 Japonés
+L053 Polaco
+L054 Francés
+L055 Español
+L056 Portugués
+L057 Coreano
+
+L058 servidores
+L059 Seleccione un servidor
+L060 Esperando al jugador

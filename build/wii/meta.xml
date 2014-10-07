@@ -1,0 +1,46 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+	<app version="1.0">
+		<name>
+			TailTale - Shippo no Puzzle
+		</name>
+		<coder>
+			BigVioSoft
+		</coder>
+		<version>
+			1.0.1.0
+		</version>
+		<release_date>
+			13.08.2014
+		</release_date>
+		<short_description>
+			Doujin puzzle game
+		</short_description>
+		<long_description>
+			TailTale - Shippo no Puzzle / Readme
+
+			About:
+			Similar to the classic Tetris strategy must
+			falling Blocks are sorted by color. Once four
+			or more same-colored Stones together, they
+			dissolve and release if necessary through the
+			sliding blocks further down a chain reaction.
+			If the field is completely filled so the player
+			has lost.
+
+			Singleplayer:
+			Theoretically, the playing time is endless,
+			depending on the achieved Score. It can be the
+			beginning of the pace after sliding Blocks as
+			well as the general difficulty to adjust.
+
+			Multiplayer:
+			The procedure is as in single player mode.
+			The winner is the Players how get the most
+			points set by Host.
+
+			More infos you can found here:
+			- Webpage: http://www.tailtale.u-ac.net/
+
+			Have FUN!
+		</long_description>
+	</app>

@@ -1,0 +1,74 @@
+﻿#
+# TailTale Language File (German Translation)
+# by Martin Dieter
+#
+
+L000 Drücke Start um zu Beginnen
+
+L001 Hauptmenu
+L002 Einzelspieler
+L003 Mehrspieler
+L004 Einstellungen
+L005 Spielregeln
+L006 Beenden
+
+L007 Mehrspieler
+L008 Netzwerk erstellen
+L009 Mit Server verbinden
+L010 Spieler Einstellungen
+L011 Starten ein neues Netzwerk Spiel
+L012 zu einem Server verbinden
+L013 Allgemeine Spieler Einstellungen
+L014 Netzwerk Spiel erstellen
+L015 Spiel-Niveau
+L016 Spiel-Punkte
+L061 Spiel-Blöcke
+L062 Evolution
+L017 Spiel-Niveau ändern
+L018 Spiel-Punkte ändern
+L019 Mit Server verbinden
+L020 Geben die IP des Servers an,
+L021 um an einen Spiel teilzunehmen!
+L022 Spieler Einstellungen
+L023 Geb deinen Spielername an
+
+L024 Einstellungen
+L025 Spiel-Niveau
+L026 Erlauben Debug
+L027 Sprache
+L028 Vollbild
+L029 Bildschirmgröße
+L030 Spielgeschwindigkeit
+L031 Spielgeschwindigkeit anzeigen
+L032 Wächsel Joystick controle
+L033 Erlauben Sound
+L034 Music Lautstärke
+L035 Sound Lautstärke
+L036 Spiel-Niveau ändern
+L037 Erlauben Debug
+L038 Sprache wählen
+L039 In Vollbild ändern
+L040 Bildschirmgröße ändern
+L041 Spielgeschwindigkeit ändern
+L042 Spielgeschwindigkeit anzeigen
+L043 Wächsel die Joystick controle
+L044 Erlauben Sound
+L045 Music Lautstärke
+L046 Sound Lautstärke
+
+L047 Ja
+L048 Nein
+
+L049 Englisch
+L050 Deutsch
+L051 Chinesisch
+L052 Japanisch
+L053 Polnisch
+L054 Französisch
+L055 Spanisch
+L056 Portugiesisch
+L057 Koreanisch
+
+L058 Serverliste
+L059 Wählen ein Server
+L060 warten auf den Spieler
