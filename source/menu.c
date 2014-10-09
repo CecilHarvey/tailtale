@@ -384,20 +384,21 @@ int TGameMain_Poll(TGameMain *class, int counter) {
   case TitleSplash:
     i = InputJoyKeyTriger(0);
 
+    if (class->titletimer == 15)
+      SoundSE(13);
+
 #ifdef TAILTALE_HD
     if (class->splash1->h < 272)
-		class->splash1->h += 4;
+		class->splash1->h += 1;
 #endif
 
-    if (class->titletimer < 134) {
 #ifdef TAILTALE_HD
-        if (class->splash2->w < 136)
-          class->splash2->w += 2;
+    if (class->splash2->w < 136)
+        class->splash2->w += 1;
 #else
-        if (class->splash1->w < 270)
-          class->splash1->w += 2;
+    if (class->splash1->w < 270)
+        class->splash1->w += 1;
 #endif
-	}
 
     class->titletimer = class->titletimer + 1;
 #ifdef X86
@@ -405,9 +406,7 @@ int TGameMain_Poll(TGameMain *class, int counter) {
 #else
 	SDL_Delay (5);
 #endif
-    if (class->titletimer == 30)
-      SoundSE(13);
-    if ((class->titletimer == 300) || ((i & (IN_Button1)) != 0)) {
+    if ((class->titletimer == 400) /* || ((i & (IN_Button1)) != 0) */) {
       class->titletimer = 0;
       class->step = TitleHandle;
       class->init = 1;

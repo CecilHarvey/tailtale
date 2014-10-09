@@ -54,6 +54,10 @@ int main (int argc, char** argv) {
     printf ("fatInitDefault failed: Unable to initialize FAT!\n");
 #endif
 
+#if defined(MACOSX)
+  chdir(SDL_GetBasePath());
+#endif
+    
   Config_Load ();
 
   /* ----- SDL ‰Šú‰» */
@@ -166,5 +170,6 @@ int main (int argc, char** argv) {
   SDL_Quit();
 #endif
 
+  exit(0);
   return 0;
 }

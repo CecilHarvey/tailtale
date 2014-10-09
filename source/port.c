@@ -23,7 +23,7 @@ static void SCREEN_ShutdownVideo() {
     }
 
     if (video_surface) {
-#ifndef VS_WIN8
+#if !defined(VS_WIN8) && !defined(__APPLE__)
 		SDL_FreeSurface(video_surface);
 #endif
 		video_surface = NULL;
@@ -48,7 +48,7 @@ SDL_Surface * SCREEN_SetVideoMode (int width, int height, Uint32 flags) {
         SCREEN_ShutdownVideo ();
     }
 
-#if !defined(ANDROID) || !defined(WINPHONE)
+#if !defined(ANDROID) && !defined(WINPHONE)
     SDL_DisplayMode display_mode;
     if (SDL_GetDesktopDisplayMode (0, &display_mode) != 0) {
         SCREEN_ShutdownVideo ();
@@ -68,6 +68,8 @@ SDL_Surface * SCREEN_SetVideoMode (int width, int height, Uint32 flags) {
     video_window = SDL_CreateWindow ("TailTale", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 480, 272, window_flags);
 #elif WINPHONE
     video_window = SDL_CreateWindow ("TailTale", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, 800, 640, window_flags);
+#elif MACOSX
+    video_window = SDL_CreateWindow ("TailTale", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, width, height, window_flags);
 #else
     video_window = SDL_CreateWindow ("TailTale", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, display_mode.w, display_mode.h, window_flags);
 #endif
@@ -81,6 +83,18 @@ SDL_Surface * SCREEN_SetVideoMode (int width, int height, Uint32 flags) {
         SCREEN_ShutdownVideo ();
         return NULL;
     }
+
+#ifdef MACOSX
+
+#ifdef TAILTALE_HD
+    width = 480;
+    height = 272;
+#else
+    width = 320;
+    height = 240;
+#endif
+
+#endif
 
     video_texture = SDL_CreateTexture (video_renderer, SDL_PIXELFORMAT_RGB888, SDL_TEXTUREACCESS_STREAMING, width, height);
     if (!video_texture) {

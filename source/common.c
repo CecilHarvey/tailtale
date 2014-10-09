@@ -11,6 +11,36 @@ char net_name[64];
 int net_score, net_block, net_evomode;
 #endif
 
+#if defined(MACOSX)
+
+const char *GetINIDir() {
+	static char buf[256] = "";
+	if (buf[0] == '\0') {
+		sprintf(buf, "%s/Library/Preferences/", getenv("HOME"));
+	}
+	return buf;
+}
+
+#elif defined(__IOS__)
+
+const char *GetINIDir() {
+	static char buf[256] = "";
+	if (buf[0] == '\0') {
+        char *val = SDL_GetPrefPath("Library", "");
+        strcpy(buf, val);
+        SDL_free(val);
+	}
+	return buf;
+}
+
+#else
+
+const char *GetINIDir() {
+	return BASEDIR;
+}
+
+#endif
+
 void Config_Load () {
 #if defined(_DINGOO) || defined(GEKKODISC) // NATIV Dingoo and WII Disc
 	sys_level = 1;
@@ -27,12 +57,12 @@ void Config_Load () {
 #else
 	FILE* config;
 
-	config = fopen (va ("%s/tailtale.ini", BASEDIR), "r");
+	config = fopen (va ("%s/tailtale.ini", GetINIDir()), "r");
 	if (config == NULL) { // Setup Default config!
 #ifdef LIBPAK
       extractPak("tailtale.ini", "tailtale.ini", openPak("data.pak"));
 #else
-	  config = fopen (va ("%s/tailtale.ini", BASEDIR), "w");
+	  config = fopen (va ("%s/tailtale.ini", GetINIDir()), "w");
 		fprintf (config, "sys_level=1\n");
 		fprintf (config, "sys_debug=1\n");
 		fprintf (config, "sys_language=0\n");
@@ -83,7 +113,7 @@ void Config_Save () {
 #else
 	FILE *config;
 
-	config = fopen (va ("%s/tailtale.ini", BASEDIR), "w");
+	config = fopen (va ("%s/tailtale.ini", GetINIDir()), "w");
 	if (config == NULL)
 		printf ("Config_Save failed: Cannot open tailtale.ini\n");
 	else {
@@ -198,7 +228,7 @@ FILE *fmemopen (void *buf, size_t size, const char *opentype) {
 
 char *va (const char *fmt, ...) {
 	char *p, *np;
-	int n, size = 64;
+	int n, size = 256;
 	va_list ap;
 
 	if ((p = malloc (size)) == NULL)

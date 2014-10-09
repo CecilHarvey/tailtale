@@ -21,6 +21,10 @@
 
 #if defined(ANDROID)
 #define BASEDIR "/sdcard/tailtale/"
+#elif defined (MACOSX)
+#define BASEDIR "./data"
+#elif defined (__IOS__)
+#define BASEDIR "./data"
 #else
 #define BASEDIR "."
 #endif

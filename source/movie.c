@@ -162,7 +162,7 @@ void YUV420ToRGB (unsigned char *pYUVBuf[3], unsigned long width, unsigned long 
 int play_movie (char *filename) {
 	THEORAPLAY_Decoder *decoder = NULL;
 #ifdef SDL2
-#if !defined(ANDROID) || !defined(WINPHONE)
+#if !defined(ANDROID) && !defined(WINPHONE) && !defined(MACOSX)
 	SDL_Window *wnd = NULL;
 	SDL_Renderer *ren = NULL;
 	SDL_Texture *tex = NULL;
@@ -199,7 +199,7 @@ int play_movie (char *filename) {
 	if (scr->Screen) {
 		SDL_FillRect(scr->Screen, NULL, SDL_MapRGB(scr->Screen->format, 0, 0, 0));
 #ifdef SDL2
-#if !defined(ANDROID) || !defined(WINPHONE)
+#if !defined(ANDROID) && !defined(WINPHONE) && !defined(MACOSX)
 		wnd = SDL_CreateWindow ("TailTale", SDL_WINDOWPOS_UNDEFINED, SDL_WINDOWPOS_UNDEFINED, video->width, video->height, SDL_WINDOW_FULLSCREEN);
 		if (!wnd)
 			printf ("Couldn't set create window: %s\n", SDL_GetError ());
@@ -250,7 +250,7 @@ int play_movie (char *filename) {
 	framems = (video->fps == 0.0) ? 0 : ((Uint32) (1000.0 / video->fps));
 
 #ifdef SDL2
-#if defined(ANDROID) || defined(WINPHONE)
+#if defined(ANDROID) || defined(WINPHONE) || defined(MACOSX)
 	initfailed = quit = (!scr->Screen || !overlay);
 #else
 	initfailed = quit = (!scr->Screen || !wnd || !ren || !overlay);
@@ -305,7 +305,7 @@ int play_movie (char *filename) {
 				}
 			} else {
 #ifdef TAILTALE_HD
-				SDL_Rect dstrect = { scr->Screen->w / 2 - video->width / 2, scr->Screen->h / 2 - video->height / 2, scr->Screen->w, scr->Screen->h };
+				SDL_Rect dstrect = { 80, 16, scr->Screen->w, scr->Screen->h };
 #else
 				SDL_Rect dstrect = { 0, 0, scr->Screen->w, scr->Screen->h };
 #endif
@@ -320,7 +320,7 @@ int play_movie (char *filename) {
 				SDL_UnlockSurface (overlay);
 
 #ifdef SDL2
-#if defined(ANDROID) || defined(WINPHONE)
+#if defined(ANDROID) || defined(WINPHONE) || defined(MACOSX)
 #ifdef TAILTALE_HD
 				SDL_Rect movrect = { 67, 3, 346, 266 };
 
@@ -397,7 +397,7 @@ int play_movie (char *filename) {
 #endif
 
 #ifdef SDL2
-#if !defined(ANDROID) || !defined(WINPHONE)
+#if !defined(ANDROID) && !defined(WINPHONE) && !defined(MACOSX)
 	if (ren)
 		SDL_DestroyRenderer (ren);
 

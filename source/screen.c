@@ -66,7 +66,7 @@ TGameScreen *TGameScreen_Create(int width, int height, int depth)
 
   /* ----- ƒXƒNƒŠ[ƒ“‚Ì¶¬ */
 #ifdef SDL2
-#if defined(ANDROID) || defined(WINPHONE)
+#if defined(ANDROID) || defined(WINPHONE) || defined(__IOS__)
   class->Screen = SCREEN_SetVideoMode (width, height, SDL_SWSURFACE);
 #else
   class->Screen = SCREEN_SetVideoMode (width, height, SDL_SWSURFACE|((sys_fullscreen) ? SCREEN_FULLSCREEN : 0));
